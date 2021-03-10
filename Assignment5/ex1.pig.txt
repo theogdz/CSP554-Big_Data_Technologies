@@ -1,0 +1,2 @@
+food_ratings = LOAD '/user/hadoop/foodratings39505.txt' USING PigStorage(',') AS (name:chararray, f1:int, f2:int, f3:int, f4:int, placeid:int);
+DESCRIBE food_ratings;

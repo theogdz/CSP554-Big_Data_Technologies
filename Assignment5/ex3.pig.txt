@@ -1,0 +1,2 @@
+food_ratings_profile = FOREACH (GROUP food_ratings ALL) GENERATE MIN(food_ratings.f2), MAX(food_ratings.f2), AVG(food_ratings.f2), MIN(food_ratings.f3), MAX(food_ratings.f3), AVG(food_ratings.f3);
+dump food_ratings_profile;

@@ -1,0 +1,4 @@
+food_ratings_subset = FOREACH food_ratings GENERATE name, f4;
+STORE food_ratings_subset INTO '/user/hadoop/fr_subset' USING PigStorage(',');
+Top6 = LIMIT food_ratings_subset 6; 
+dump Top6;

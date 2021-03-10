@@ -1,0 +1,3 @@
+food_ratings_2percent = SAMPLE food_ratings 0.02;
+temp2 = LIMIT food_ratings_2percent 10;
+dump temp2

@@ -1,0 +1,4 @@
+food_places = LOAD '/user/hadoop/foodplaces39505.txt' USING PigStorage(',') AS (placeid:int,placename:Chararray);
+food_ratings_w_place_names = JOIN food_ratings BY placeid, food_places BY placeid;
+temp3 = LIMIT food_ratings_w_place_names 6;
+dump temp3;
